@@ -1,0 +1,72 @@
+{
+	"data": {
+		"codashop": [
+			{
+				"title": "What is Codashop?",
+				"author": "Coda Admin",
+				"date_posted": "2021-01-01",
+				"contents": ""
+			},
+			{
+				"title": "Why choose Codashop?",
+				"author": "Coda Admin",
+				"date_posted": "2022-01-01",
+				"contents": ""
+			},
+			{
+				"title": "Codashop's Referral Program",
+				"author": "Coda Admin",
+				"date_posted": "2023-01-01",
+				"contents": ""
+			}
+		],
+		"codapay": [
+			{
+				"title": "What is Codapay?",
+				"author": "Coda Admin",
+				"date_posted": "2021-01-01",
+				"contents": ""
+			},
+			{
+				"title": "Why choose Codapay?",
+				"author": "Coda Admin",
+				"date_posted": "2022-01-01",
+				"contents": "<section class='placeholder__container'><figure class='placeholder__image-container'><img src='https://bit.ly/3A4wNcD' alt='Testdome' class='placeholder__image'/></figure><div class='placeholder__link-container'><a class='placeholder__link' href='https://testdome.com'>Visit the Website</a><a class='placeholder__link' href='https://twitter.com/testdome'>Follow Us</a></div></section>"
+			},
+			{
+				"title": "How to Find a Successful Transaction Voucher Code?",
+				"author": "Coda Admin",
+				"date_posted": "2023-01-01",
+				"contents": ""
+			}
+		],
+		"xshop": [
+			{
+				"title": "What is XShop?",
+				"author": "Coda Admin",
+				"date_posted": "2021-01-01",
+				"contents": ""
+			},
+			{
+				"title": "Why choose XShop?",
+				"author": "Coda Admin",
+				"date_posted": "2022-01-01",
+				"contents": ""
+			}
+		],
+		"custom_commerce": [
+			{
+				"title": "What is Custom Commerce with Coda?",
+				"author": "Coda Admin",
+				"date_posted": "2021-01-01",
+				"contents": ""
+			},
+			{
+				"title": "Why integrate your e-commerce with Coda?",
+				"author": "Coda Admin",
+				"date_posted": "2022-01-01",
+				"contents": ""
+			}
+		]
+	}
+}
