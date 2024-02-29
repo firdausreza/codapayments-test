@@ -216,9 +216,11 @@ export default function Homepage() {
 						Getting lost in our products? Check these FAQs to answer
 						your current problem!
 					</p>
-					<button className="w-max mt-8 px-4 py-2 rounded-full bg-app-secondary hover:bg-app-secondary/95 text-white transition-colors">
-						See Articles
-					</button>
+					<Link to="/articles" reloadDocument>
+						<button className="w-max mt-8 px-4 py-2 rounded-full bg-app-secondary hover:bg-app-secondary/95 text-white transition-colors">
+							See Articles
+						</button>
+					</Link>
 				</article>
 			</section>
 		</>

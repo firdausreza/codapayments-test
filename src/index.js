@@ -5,6 +5,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root.jsx";
 import ErrorPage from "./routes/error-page.jsx";
 import Homepage from "./routes/homepage.jsx";
+import ArticlesRoot, { articlesLoader } from "./routes/articles-root.jsx";
+import ArticlesPage from "./routes/articles.jsx";
+import ArticleDetailPage, {
+	articleDetailLoader,
+} from "./routes/article-detail.jsx";
+import SearchPage, { searchLoader } from "./routes/search.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -15,6 +21,27 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Homepage />,
+			},
+			{
+				path: "articles",
+				element: <ArticlesRoot />,
+				loader: articlesLoader,
+				children: [
+					{
+						index: true,
+						element: <ArticlesPage />,
+					},
+					{
+						path: ":section/:slug",
+						loader: articleDetailLoader,
+						element: <ArticleDetailPage />,
+					},
+					{
+						path: "search",
+						loader: searchLoader,
+						element: <SearchPage />,
+					},
+				],
 			},
 		],
 	},
@@ -27,8 +54,3 @@ root.render(
 		<RouterProvider router={router} />
 	</React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();

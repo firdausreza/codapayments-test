@@ -5,10 +5,19 @@ import { useState } from "react";
 
 export default function Navbar() {
 	const [expandNavbar, setExpandNavbar] = useState(false);
+	const [searchQuery, setSearchQuery] = useState("");
 
 	const toggleNavbarExpand = () => {
 		const tempExpandNavbar = !expandNavbar;
 		setExpandNavbar(tempExpandNavbar);
+	};
+
+	const inputSearchQuery = (value) => {
+		setSearchQuery(value);
+	};
+
+	const onSearchPrompt = () => {
+		window.location.href = `/articles/search?query=${searchQuery}`;
 	};
 
 	return (
@@ -18,7 +27,7 @@ export default function Navbar() {
 				className="w-full flex justify-between items-center py-2 md:py-4 px-4"
 			>
 				<div className="md:w-[66%]">
-					<Link to="/">
+					<Link to="/" className="w-max block" reloadDocument>
 						<figure className="max-w-[150px] md:max-w-[200px]">
 							<img
 								src={CodaLogo}
@@ -37,10 +46,23 @@ export default function Navbar() {
 							type="text"
 							name="search-article"
 							id="search-article"
-							className="flex-1 px-2 py-2 rounded-l-lg focus:outline-none text-sm border-r border-app-primary"
+							className="flex-1 px-2 py-2 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-app-primary text-sm border-r border-app-primary"
 							placeholder="Search for article"
+							onChange={(e) => inputSearchQuery(e.target.value)}
+							onKeyDown={(e) => {
+								if (e.keyCode === 13) {
+									onSearchPrompt();
+								}
+							}}
 						/>
-						<button className="bg-transparent rounded-r-lg active:bg-app-primary p-2">
+						<button
+							onClick={() => {
+								if (searchQuery.length > 3) {
+									onSearchPrompt();
+								}
+							}}
+							className="bg-transparent rounded-r-lg active:bg-app-primary p-2"
+						>
 							<IconSearch
 								size={20}
 								className="text-app-primary active:text-white"
@@ -78,10 +100,23 @@ export default function Navbar() {
 							type="text"
 							name="search-article"
 							id="search-article"
-							className="flex-1 px-2 py-2 rounded-l-lg focus:outline-none text-sm border-r border-app-primary"
+							className="flex-1 px-2 py-2 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-app-primary text-sm border-r border-app-primary"
 							placeholder="Search for article"
+							onChange={(e) => inputSearchQuery(e.target.value)}
+							onKeyDown={(e) => {
+								if (e.keyCode === 13) {
+									onSearchPrompt();
+								}
+							}}
 						/>
-						<button className="bg-white p-2 rounded-r-lg active:bg-app-primary">
+						<button
+							onClick={() => {
+								if (searchQuery.length > 3) {
+									onSearchPrompt();
+								}
+							}}
+							className="bg-white p-2 rounded-r-lg active:bg-app-primary"
+						>
 							<IconSearch
 								size={20}
 								className="text-app-primary active:text-white"
