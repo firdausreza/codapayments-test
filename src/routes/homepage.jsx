@@ -6,7 +6,6 @@ import {
 	IconMessageShare,
 	IconBrandFacebookFilled,
 	IconChevronRight,
-	IconExternalLink,
 } from "@tabler/icons-react";
 
 export default function Homepage() {

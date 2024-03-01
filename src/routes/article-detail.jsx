@@ -1,9 +1,8 @@
-import { useLoaderData } from "react-router-dom";
 import { useEffect } from "react";
+import { Link, useLoaderData } from "react-router-dom";
+import { IconChevronLeft, IconUserCircle } from "@tabler/icons-react";
 import moment from "moment";
 import data from "../json/articles.json";
-
-import { IconUserCircle } from "@tabler/icons-react";
 
 export async function articleDetailLoader({ params }) {
 	const section = params.section;
@@ -34,7 +33,15 @@ export default function ArticleDetailPage() {
 
 	return (
 		<article id="articles-container" className="w-full">
-			<h3 className="text-4xl font-bold text-app-primary">
+			<Link
+				to="/"
+				reloadDocument
+				className="flex items-center text-sm text-app-primary hover:underline underline-offset-2"
+			>
+				<IconChevronLeft size={16} />
+				Back to Homepage
+			</Link>
+			<h3 className="text-4xl font-bold text-app-primary mt-4">
 				{article.title || "Article Title"}
 			</h3>
 			<div className="flex items-center mt-4">
