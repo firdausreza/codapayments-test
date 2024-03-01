@@ -1,9 +1,19 @@
+import { Link } from "react-router-dom";
+import { IconChevronLeft } from "@tabler/icons-react";
 import CodashopLogo from "../assets/img/coda-logo.png";
 
 export default function ArticlesPage() {
 	return (
 		<section id="articles-container" className="w-full">
-			<h3 className="text-4xl font-bold text-app-primary">
+			<Link
+				to="/"
+				reloadDocument
+				className="flex items-center text-sm text-app-primary hover:underline underline-offset-2"
+			>
+				<IconChevronLeft size={16} />
+				Back to Homepage
+			</Link>
+			<h3 className="text-4xl font-bold text-app-primary mt-4">
 				Getting Started
 			</h3>
 			<figure className="max-w-[300px] mt-8">
